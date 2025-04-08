@@ -29,6 +29,8 @@ public class ProductoService {
     @Transactional
     public ProductoDTO addProducto(ProductoDTO productoDTO){
         Producto producto = productoMapper.toEntity(productoDTO);
+
+
         Producto productoNuevo = productoRepository.save(producto);
 
         return productoMapper.toDTO(productoNuevo);
@@ -36,7 +38,9 @@ public class ProductoService {
 
     @Transactional
     public void deleteProducto(Long id){
+        if(!productoRepository.existsById(id)){
+            throw new RuntimeException("No se encontro el Producto con id '" + id + "'");
+        }
         productoRepository.deleteById(id);
     }
-
 }
