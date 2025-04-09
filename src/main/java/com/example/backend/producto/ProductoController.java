@@ -13,12 +13,12 @@ public class ProductoController {
     private ProductoService productoService;
 
     @GetMapping
-    public List<ProductoDTO> GetAll(){
+    public List<ProductoDTO> getAll(){
         return productoService.getAll();
     }
 
     @GetMapping("/{id}")
-    public ProductoDTO GetById(@PathVariable Long id){
+    public ProductoDTO getById(@PathVariable Long id){
         return productoService.getById(id);
     }
 
