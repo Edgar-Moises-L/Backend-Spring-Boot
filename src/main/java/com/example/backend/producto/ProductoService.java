@@ -15,32 +15,53 @@ public class ProductoService {
     @Autowired
     private ProductoMapper productoMapper;
 
-    public List<ProductoDTO> getAll(){
+    public List<ProductoDTO> getAll() {
         return productoRepository.findAll().stream()
                 .map(productoMapper::toDTO)
                 .collect(Collectors.toList());
     }
 
-    public ProductoDTO getById(Long id){
-         Producto producto = productoRepository.findById(id).orElse(null);
-         return productoMapper.toDTO(producto);
+    public ProductoDTO getById(Long id) {
+        Producto producto = productoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("No se encontro el producto con el id '" + id + "'"));
+        return productoMapper.toDTO(producto);
     }
 
     @Transactional
-    public ProductoDTO addProducto(ProductoDTO productoDTO){
+    public ProductoDTO addProducto(ProductoDTO productoDTO) {
         Producto producto = productoMapper.toEntity(productoDTO);
-
-
+        validarProducto(producto);
         Producto productoNuevo = productoRepository.save(producto);
 
         return productoMapper.toDTO(productoNuevo);
     }
 
     @Transactional
-    public void deleteProducto(Long id){
-        if(!productoRepository.existsById(id)){
+    public void deleteProducto(Long id) {
+        if (!productoRepository.existsById(id)) {
             throw new RuntimeException("No se encontro el Producto con id '" + id + "'");
         }
         productoRepository.deleteById(id);
+    }
+
+
+    private void validarProducto(Producto producto) {
+        if (producto.getCodigo() == null || producto.getCodigo().trim().isEmpty()) {
+            throw new RuntimeException("El codigo no puede estar vacio.");
+        }
+
+        if (producto.getNombre() == null || producto.getNombre().trim().isEmpty()) {
+            throw new RuntimeException("El nombre no puede estar vacio.");
+        }
+
+        if (producto.getPrecio() == null || producto.getPrecio() <= 0) {
+            throw new RuntimeException("El precio debe tener un valor mayor a 0.");
+        }
+
+        if (producto.getCantidad() == null || producto.getCantidad() <= 0) {
+            throw new RuntimeException("La cantidad debe tener un valor mayor a 0.");
+        }
+
+
     }
 }
