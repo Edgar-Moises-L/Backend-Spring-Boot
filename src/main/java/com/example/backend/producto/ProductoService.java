@@ -37,6 +37,23 @@ public class ProductoService {
     }
 
     @Transactional
+    public ProductoDTO updateProducto(ProductoDTO productoDTO, Long id) {
+        Producto productoGuardado = productoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("No se encontro el producto con el id '" + id + "'"));
+
+        Producto productoNuevo = productoMapper.toEntity(productoDTO);
+        validarProducto(productoNuevo);
+
+        productoGuardado.setNombre(productoNuevo.getNombre());
+        productoGuardado.setCantidad(productoNuevo.getCantidad());
+        productoGuardado.setPrecio(productoNuevo.getPrecio());
+
+        productoRepository.save(productoGuardado);
+
+        return productoMapper.toDTO(productoGuardado);
+    }
+
+    @Transactional
     public void deleteProducto(Long id) {
         if (!productoRepository.existsById(id)) {
             throw new RuntimeException("No se encontro el Producto con id '" + id + "'");

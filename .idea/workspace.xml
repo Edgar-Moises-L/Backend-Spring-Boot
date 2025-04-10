@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfc7f8c2-8ccb-4500-b013-8534dca079c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/partida/Partida.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/partida/PartidaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/partida/PartidaDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/partida/PartidaMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/partida/PartidaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/partida/PartidaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/backend/factura/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/factura/Factura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/backend/factura/FacturaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/factura/FacturaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/backend/factura/FacturaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/factura/FacturaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/backend/factura/FacturaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/factura/FacturaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/backend/producto/ProductoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/producto/ProductoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/backend/producto/ProductoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/producto/ProductoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/backend/producto/ProductoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/producto/ProductoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/backend/producto/ProductoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/backend/producto/ProductoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -7,8 +7,9 @@ public class ProductoDTO {
     private Long id;
     private String codigo;
     private String nombre;
-    private Double precio;
     private Integer cantidad;
+    private Double precio;
+
 
     public Long getId() {
         return id;

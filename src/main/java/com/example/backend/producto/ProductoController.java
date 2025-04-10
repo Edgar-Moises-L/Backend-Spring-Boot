@@ -1,5 +1,6 @@
 package com.example.backend.producto;
 
+import com.example.backend.partida.PartidaDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +26,11 @@ public class ProductoController {
     @PostMapping
     public ProductoDTO addProducto(@RequestBody ProductoDTO productoDTO) {
         return productoService.addProducto(productoDTO);
+    }
+
+    @PutMapping("/{id}")
+    public ProductoDTO updateProducto(@RequestBody ProductoDTO productoDTO, @PathVariable Long id){
+        return productoService.updateProducto(productoDTO, id);
     }
 
     @DeleteMapping("/{id}")
