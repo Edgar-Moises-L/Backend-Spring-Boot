@@ -13,23 +13,23 @@ public class ProductoController {
     private ProductoService productoService;
 
     @GetMapping
-    public List<ProductoDTO> getAll(){
+    public List<ProductoDTO> getAll() {
         return productoService.getAll();
     }
 
     @GetMapping("/{id}")
-    public ProductoDTO getById(@PathVariable Long id){
+    public ProductoDTO getById(@PathVariable Long id) {
         return productoService.getById(id);
     }
 
     @PostMapping
-    public ProductoDTO addProducto(@RequestBody ProductoDTO productoDTO){
+    public ProductoDTO addProducto(@RequestBody ProductoDTO productoDTO) {
         return productoService.addProducto(productoDTO);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteProducto(@PathVariable Long id){
-       productoService.deleteProducto(id);
+    public void deleteProducto(@PathVariable Long id) {
+        productoService.deleteProducto(id);
     }
 
 }

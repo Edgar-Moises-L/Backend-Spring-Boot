@@ -14,22 +14,22 @@ public class FacturaController {
     FacturaService facturaService;
 
     @GetMapping
-    public List<FacturaDTO> getAll(){
+    public List<FacturaDTO> getAll() {
         return facturaService.getAll();
     }
 
     @GetMapping("/{id}")
-    public FacturaDTO getById(@PathVariable Long id){
+    public FacturaDTO getById(@PathVariable Long id) {
         return facturaService.getById(id);
     }
 
     @PostMapping
-    public FacturaDTO addFactura(@RequestBody FacturaDTO facturaDTO){
+    public FacturaDTO addFactura(@RequestBody FacturaDTO facturaDTO) {
         return facturaService.addFactura(facturaDTO);
     }
 
     @DeleteMapping("/{id}")
-    public void deletedFactura(@PathVariable Long id){
+    public void deletedFactura(@PathVariable Long id) {
         facturaService.deletedFactura(id);
     }
 }

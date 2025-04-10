@@ -5,13 +5,13 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "Venta")
+@Table(name = "factura")
 public class Factura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length =5, unique = true)
+    @Column(nullable = false, length = 5, unique = true)
     private String folio;
 
     @Column(name = "fecha_expedicion")
@@ -23,7 +23,6 @@ public class Factura {
 
     @Column(nullable = false)
     private Double total;
-
 
 
     public Long getId() {
