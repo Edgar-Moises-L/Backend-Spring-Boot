@@ -1,5 +1,6 @@
 package com.example.backend.partida;
 
+import com.example.backend.factura.Factura;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,6 +14,8 @@ public class PartidaMapper {
         dto.setCantidad(partida.getCantidad());
         dto.setPrecio(partida.getPrecio());
         dto.setTotal(partida.getTotal());
+        dto.setFactura_id(partida.getFactura().getId());
+
 
         return dto;
     }
@@ -25,6 +28,10 @@ public class PartidaMapper {
         partida.setCantidad(dto.getCantidad());
         partida.setPrecio(dto.getPrecio());
         partida.setTotal(dto.getTotal());
+
+        Factura factura = new Factura();
+        factura.setId(dto.getFactura_id());
+        partida.setFactura(factura);
 
         return partida;
     }

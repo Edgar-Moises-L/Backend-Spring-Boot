@@ -1,6 +1,9 @@
 package com.example.backend.factura;
 
+import com.example.backend.partida.PartidaDTO;
+
 import java.util.Date;
+import java.util.List;
 
 public class FacturaDTO {
     private Long id;
@@ -8,7 +11,7 @@ public class FacturaDTO {
     private Date fechaExpedicion;
     private Double subtotal;
     private Double total;
-
+    private List<PartidaDTO> partidas;
 
     public Long getId() {
         return id;
@@ -48,5 +51,13 @@ public class FacturaDTO {
 
     public void setSubtotal(Double subtotal) {
         this.subtotal = subtotal;
+    }
+
+    public List<PartidaDTO> getPartidas() {
+        return partidas;
+    }
+
+    public void setPartidas(List<PartidaDTO> partidas) {
+        this.partidas = partidas;
     }
 }

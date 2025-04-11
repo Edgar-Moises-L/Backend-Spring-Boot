@@ -6,6 +6,7 @@ public class PartidaDTO {
     private Integer cantidad;
     private Double precio;
     private Double total;
+    private Long factura_id;
 
     public Long getId() {
         return id;
@@ -45,5 +46,13 @@ public class PartidaDTO {
 
     public void setTotal(Double total) {
         this.total = total;
+    }
+
+    public Long getFactura_id() {
+        return factura_id;
+    }
+
+    public void setFactura_id(Long factura_id) {
+        this.factura_id = factura_id;
     }
 }

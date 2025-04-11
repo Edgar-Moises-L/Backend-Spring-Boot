@@ -1,5 +1,6 @@
 package com.example.backend.partida;
 
+import com.example.backend.factura.Factura;
 import jakarta.persistence.*;
 
 @Entity
@@ -20,6 +21,12 @@ public class Partida {
 
     @Column(nullable = false)
     private Double total;
+
+    @ManyToOne
+    @JoinColumn(name = "factura_id", nullable = false)
+    private Factura factura;
+
+
 
     public Integer getCantidad() {
         return cantidad;
@@ -59,5 +66,13 @@ public class Partida {
 
     public void setTotal(Double total) {
         this.total = total;
+    }
+
+    public Factura getFactura() {
+        return factura;
+    }
+
+    public void setFactura(Factura factura) {
+        this.factura = factura;
     }
 }

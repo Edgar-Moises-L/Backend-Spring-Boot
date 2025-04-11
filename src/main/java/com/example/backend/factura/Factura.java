@@ -1,8 +1,10 @@
 package com.example.backend.factura;
 
+import com.example.backend.partida.Partida;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "factura")
@@ -23,6 +25,10 @@ public class Factura {
 
     @Column(nullable = false)
     private Double total;
+
+    @OneToMany(mappedBy = "factura", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Partida> partidas;
+
 
 
     public Long getId() {
@@ -63,5 +69,13 @@ public class Factura {
 
     public void setTotal(Double total) {
         this.total = total;
+    }
+
+    public List<Partida> getPartidas() {
+        return partidas;
+    }
+
+    public void setPartidas(List<Partida> partidas) {
+        this.partidas = partidas;
     }
 }

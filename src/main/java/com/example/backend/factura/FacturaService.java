@@ -43,21 +43,21 @@ public class FacturaService {
 
     private void validarFactura(Factura factura) {
 
-        if (factura.getFolio() == null || factura.getFolio().trim().isEmpty()) {
-            throw new RuntimeException("El folio no puede estar bacio");
-        }
-
-        if (factura.getFechaExpedicion() == null) {
-            throw new RuntimeException("La fecha no puede estar bacia");
-        }
-
-        if (factura.getSubtotal() == null || factura.getSubtotal() <= 0) {
-            throw new RuntimeException("El subtotal no puede ser menor a 0");
-        }
-
-        if (factura.getTotal() == null || factura.getTotal() <= 0) {
-            throw new RuntimeException("El total no puede ser menor a 0");
-        }
+//        if (factura.getFolio() == null || factura.getFolio().trim().isEmpty()) {
+//            throw new RuntimeException("El folio no puede estar bacio");
+//        }
+//
+//        if (factura.getFechaExpedicion() == null) {
+//            throw new RuntimeException("La fecha no puede estar bacia");
+//        }
+//
+//        if (factura.getSubtotal() == null || factura.getSubtotal() <= 0) {
+//            throw new RuntimeException("El subtotal no puede ser menor a 0");
+//        }
+//
+//        if (factura.getTotal() == null || factura.getTotal() <= 0) {
+//            throw new RuntimeException("El total no puede ser menor a 0");
+//        }
     }
 
 }
