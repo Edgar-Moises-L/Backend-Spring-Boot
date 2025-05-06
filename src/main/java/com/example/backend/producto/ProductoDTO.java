@@ -1,13 +1,11 @@
 package com.example.backend.producto;
 
-import jakarta.persistence.Column;
-
 public class ProductoDTO {
 
     private Long id;
     private String codigo;
     private String nombre;
-    private Integer cantidad;
+    private Integer stock;
     private Double precio;
 
 
@@ -43,11 +41,11 @@ public class ProductoDTO {
         this.codigo = codigo;
     }
 
-    public Integer getCantidad() {
-        return cantidad;
+    public Integer getStock() {
+        return stock;
     }
 
-    public void setCantidad(Integer cantidad) {
-        this.cantidad = cantidad;
+    public void setStock(Integer stock) {
+        this.stock = stock;
     }
 }

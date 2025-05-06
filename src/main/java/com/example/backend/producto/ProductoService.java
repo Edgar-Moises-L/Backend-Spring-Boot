@@ -45,7 +45,7 @@ public class ProductoService {
         validarProducto(productoNuevo);
 
         productoGuardado.setNombre(productoNuevo.getNombre());
-        productoGuardado.setCantidad(productoNuevo.getCantidad());
+        productoGuardado.setStock(productoNuevo.getStock());
         productoGuardado.setPrecio(productoNuevo.getPrecio());
 
         productoRepository.save(productoGuardado);
@@ -75,7 +75,7 @@ public class ProductoService {
             throw new RuntimeException("El precio debe tener un valor mayor a 0.");
         }
 
-        if (producto.getCantidad() == null || producto.getCantidad() <= 0) {
+        if (producto.getStock() == null || producto.getStock() <= 0) {
             throw new RuntimeException("La cantidad debe tener un valor mayor a 0.");
         }
 

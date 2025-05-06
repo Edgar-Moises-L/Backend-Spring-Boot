@@ -19,7 +19,7 @@ public class Producto {
     private Double precio;
 
     @Column(nullable = false)
-    private Integer cantidad;
+    private Integer stock;
 
     public Long getId() {
         return id;
@@ -53,11 +53,11 @@ public class Producto {
         this.precio = precio;
     }
 
-    public Integer getCantidad() {
-        return cantidad;
+    public Integer getStock() {
+        return stock;
     }
 
-    public void setCantidad(Integer cantidad) {
-        this.cantidad = cantidad;
+    public void setStock(Integer stock) {
+        this.stock = stock;
     }
 }

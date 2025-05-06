@@ -12,7 +12,7 @@ public class ProductoMapper {
         dto.setCodigo(producto.getCodigo());
         dto.setNombre(producto.getNombre());
         dto.setPrecio(producto.getPrecio());
-        dto.setCantidad(producto.getCantidad());
+        dto.setStock(producto.getStock());
 
         return dto;
     }
@@ -24,7 +24,7 @@ public class ProductoMapper {
         producto.setCodigo(dto.getCodigo());
         producto.setNombre(dto.getNombre());
         producto.setPrecio(dto.getPrecio());
-        producto.setCantidad(dto.getCantidad());
+        producto.setStock(dto.getStock());
 
         return producto;
     }
